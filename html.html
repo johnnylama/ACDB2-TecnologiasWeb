@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML – Lenguaje de marcado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información básica sobre HTML, el lenguaje de marcado para la web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>HTML</h1>
+        <p class="subtitulo">HyperText Markup Language</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house icon" aria-hidden="true"></i>Inicio</a></li>
+            <li><a href="html.html" class="activo"><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</a></li>
+            <li><a href="css.html"><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</a></li>
+            <li><a href="javascript.html"><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i>Contacto</a></li>
+            <li>
+                <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon icon icon-moon" aria-hidden="true"></i>
+                    <i class="fa-solid fa-sun icon icon-sun" aria-hidden="true"></i>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <section>
+        <article>
+            <h2>¿Qué es HTML?</h2>
+            <p>
+                HTML es el lenguaje estándar para crear la estructura de las páginas web. 
+                Utiliza <em>etiquetas</em> para indicar al navegador qué tipo de contenido se está mostrando, 
+                por ejemplo: títulos, párrafos, imágenes, enlaces, tablas, formularios, entre otros.
+            </p>
+            <p>
+                La versión actual recomendada es <strong>HTML5</strong>, que incorpora nuevas etiquetas semánticas
+                como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, 
+                <code>&lt;article&gt;</code> y <code>&lt;footer&gt;</code>, las cuales mejoran la organización del contenido
+                y la accesibilidad.
+            </p>
+        </article>
+    </section>
+
+    <section class="imagen-principal">
+        <article>
+            <h2>Ejemplo sencillo de código HTML5</h2>
+            <figure>
+                <img src="img/html5.png" alt="Logo de HTML5">
+                <figcaption>HTML5 es la evolución del lenguaje de marcado para la web.</figcaption>
+            </figure>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mi primera página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola mundo&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Características principales de HTML</h2>
+            <ol>
+                <li>Define la estructura del documento.</li>
+                <li>Permite combinar texto, imágenes, audio y video.</li>
+                <li>Trabaja junto con CSS y JavaScript.</li>
+                <li>Es independiente del sistema operativo y del navegador.</li>
+                <li>Es un estándar mantenido por el W3C.</li>
+            </ol>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Tabla comparativa de los lenguajes básicos de la web</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Rol principal</th>
+                        <th>Ejemplo de uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Estructura del contenido</td>
+                        <td>Títulos, párrafos, listas, imágenes, enlaces.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Diseño y presentación</td>
+                        <td>Colores, márgenes, tipos de letra, diseño responsive.</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactividad y lógica</td>
+                        <td>Validación de formularios, menús dinámicos, animaciones.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 – Sitio informativo sobre lenguajes del desarrollo web.</p>
+    </div>
+</footer>
+<script src="js/theme.js"></script>
+</body>
+</html>

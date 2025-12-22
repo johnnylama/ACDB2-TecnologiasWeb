@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS – Hojas de estilo en cascada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información básica sobre CSS, el lenguaje de estilos para la web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>CSS</h1>
+        <p class="subtitulo">Cascading Style Sheets</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house icon" aria-hidden="true"></i>Inicio</a></li>
+            <li><a href="html.html"><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</a></li>
+            <li><a href="css.html" class="activo"><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</a></li>
+            <li><a href="javascript.html"><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i>Contacto</a></li>
+            <li>
+                <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon icon icon-moon" aria-hidden="true"></i>
+                    <i class="fa-solid fa-sun icon icon-sun" aria-hidden="true"></i>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <section>
+        <article>
+            <h2>¿Qué es CSS?</h2>
+            <p>
+                CSS es el lenguaje que se utiliza para definir la apariencia visual de un sitio web. 
+                Permite controlar colores, tamaños, márgenes, tipografía y la disposición de los elementos en la pantalla.
+            </p>
+            <p>
+                Gracias a CSS, un mismo documento HTML puede mostrarse de formas muy diferentes, adaptándose a móviles,
+                tabletas y computadores de escritorio.
+            </p>
+        </article>
+    </section>
+
+    <section class="imagen-principal">
+        <article>
+            <h2>Ejemplo básico de reglas CSS</h2>
+            <figure>
+                <img src="img/css3.png" alt="Logo de CSS3">
+                <figcaption>CSS3 añade nuevas propiedades para animaciones, gradientes y diseño flexible.</figcaption>
+            </figure>
+            <pre><code>h1 {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}</code></pre>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Ventajas de utilizar CSS</h2>
+            <ul>
+                <li>Separa el contenido (HTML) de la presentación.</li>
+                <li>Permite reutilizar estilos en múltiples páginas.</li>
+                <li>Reduce la cantidad de código repetido.</li>
+                <li>Facilita el diseño adaptable a diferentes dispositivos.</li>
+                <li>Mejora la experiencia de usuario y la accesibilidad.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Conceptos básicos de CSS</h2>
+            <p>Una regla CSS está compuesta por un <strong>selector</strong> y un conjunto de <strong>declaraciones</strong>:</p>
+            <ol>
+                <li>El <strong>selector</strong> indica a qué elementos HTML se aplicará el estilo.</li>
+                <li>Cada <strong>declaración</strong> contiene una propiedad y un valor.</li>
+            </ol>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 – Sitio informativo sobre lenguajes del desarrollo web.</p>
+    </div>
+</footer>
+<script src="js/theme.js"></script>
+</body>
+</html>

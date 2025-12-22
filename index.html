@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción a los lenguajes del desarrollo web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sitio informativo sobre los lenguajes del desarrollo web: HTML, CSS y JavaScript.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Lenguajes del Desarrollo Web</h1>
+            <p class="subtitulo">HTML · CSS · JavaScript</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul class="menu">
+                <li><a href="index.html" class="activo"><i class="fa-solid fa-house icon" aria-hidden="true"></i>Inicio</a></li>
+                <li><a href="html.html"><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</a></li>
+                <li><a href="css.html"><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</a></li>
+                <li><a href="javascript.html"><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</a></li>
+                <li><a href="contacto.html"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i>Contacto</a></li>
+                <li>
+                    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
+                        <i class="fa-solid fa-moon icon icon-moon" aria-hidden="true"></i>
+                        <i class="fa-solid fa-sun icon icon-sun" aria-hidden="true"></i>
+                        <span class="theme-label">Modo oscuro</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <article>
+                <h2>¿Qué es el desarrollo web?</h2>
+                <p>
+                    El desarrollo web es el proceso de crear sitios y aplicaciones que funcionan dentro de un navegador.
+                    Para lograrlo, se utilizan distintos lenguajes que cumplen roles específicos:
+                    <strong>HTML</strong> define la estructura, <strong>CSS</strong> aplica el diseño visual y
+                    <strong>JavaScript</strong> añade interactividad.
+                </p>
+                <p>
+                    Estos lenguajes son la base de prácticamente todos los sitios que visitamos en la World Wide Web,
+                    desde blogs sencillos hasta plataformas de comercio electrónico y redes sociales.
+                </p>
+            </article>
+        </section>
+
+        <section class="imagen-principal">
+            <article>
+                <h2>La “trilogía” del desarrollo web</h2>
+                <figure>
+                    <img src="img/portada.png" alt="Ilustración de HTML, CSS y JavaScript trabajando juntos">
+                    <figcaption>
+                        HTML estructura, CSS da estilo y JavaScript aporta dinamismo al sitio web.
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section class="tarjetas">
+            <article class="tarjeta">
+                <h3><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</h3>
+                <p>Lenguaje de marcado que define la estructura y el contenido de las páginas web.</p>
+                <a href="html.html" class="boton">Ver más sobre HTML</a>
+            </article>
+
+            <article class="tarjeta">
+                <h3><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</h3>
+                <p>Lenguaje de hojas de estilo que controla los colores, las fuentes y el diseño visual.</p>
+                <a href="css.html" class="boton">Ver más sobre CSS</a>
+            </article>
+
+            <article class="tarjeta">
+                <h3><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</h3>
+                <p>Lenguaje de programación que permite crear interacción y comportamiento dinámico.</p>
+                <a href="javascript.html" class="boton">Ver más sobre JavaScript</a>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Enlace externo de referencia</h2>
+                <p>
+                    Si deseas profundizar más en estos temas, puedes visitar el sitio oficial del
+                    <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener noreferrer">
+                        MDN Web Docs
+                    </a>, donde encontrarás documentación detallada sobre HTML, CSS y JavaScript.
+                </p>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 – Sitio informativo sobre lenguajes del desarrollo web. Elaborado por Johnny Lama.</p>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>

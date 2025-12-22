@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript – Lenguaje de programación para la web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información básica sobre JavaScript, el lenguaje de programación del lado del cliente.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>JavaScript</h1>
+        <p class="subtitulo">Lenguaje de programación del lado del cliente</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house icon" aria-hidden="true"></i>Inicio</a></li>
+            <li><a href="html.html"><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</a></li>
+            <li><a href="css.html"><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</a></li>
+            <li><a href="javascript.html" class="activo"><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</a></li>
+            <li><a href="contacto.html"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i>Contacto</a></li>
+            <li>
+                <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
+                    <i class="fa-solid fa-moon icon icon-moon" aria-hidden="true"></i>
+                    <i class="fa-solid fa-sun icon icon-sun" aria-hidden="true"></i>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <section>
+        <article>
+            <h2>¿Qué es JavaScript?</h2>
+            <p>
+                JavaScript es un lenguaje de programación que permite agregar interactividad a las páginas web.
+                Con JavaScript se pueden crear menús desplegables, carruseles de imágenes, validación de formularios
+                en el lado del cliente y muchas otras funciones dinámicas.
+            </p>
+            <p>
+                Aunque originalmente se ejecutaba solo en el navegador, hoy también puede ejecutarse en el servidor
+                mediante plataformas como Node.js.
+            </p>
+        </article>
+    </section>
+
+    <section class="imagen-principal">
+        <article>
+            <h2>Ejemplo básico de JavaScript en una página</h2>
+            <figure>
+                <img src="img/js.png" alt="Logo de JavaScript">
+                <figcaption>JavaScript añade comportamiento interactivo al sitio web.</figcaption>
+            </figure>
+            <pre><code>&lt;button onclick="alert('Hola desde JavaScript')"&gt;
+  Haz clic aquí
+&lt;/button&gt;</code></pre>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Ventajas de utilizar JavaScript en el cliente</h2>
+            <ul>
+                <li>Mejora la interacción con el usuario.</li>
+                <li>Permite validar datos antes de enviarlos al servidor.</li>
+                <li>Reduce la carga de trabajo del servidor en algunas tareas.</li>
+                <li>Se integra fácilmente con HTML y CSS.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Ejemplos de uso de JavaScript</h2>
+            <ol>
+                <li>Mostrar y ocultar menús.</li>
+                <li>Actualizar partes de la página sin recargarla.</li>
+                <li>Crear juegos sencillos en el navegador.</li>
+                <li>Consumir APIs para mostrar datos en tiempo real.</li>
+            </ol>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 – Sitio informativo sobre lenguajes del desarrollo web.</p>
+    </div>
+</footer>
+<script src="js/theme.js"></script>
+</body>
+</html>
