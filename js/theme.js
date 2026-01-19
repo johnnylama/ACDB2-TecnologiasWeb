@@ -21,18 +21,12 @@
     };
 
     const applyTheme = (theme) => {
-        if (theme === "dark") {
-            root.setAttribute("data-theme", "dark");
-            toggle.setAttribute("aria-pressed", "true");
-            if (label) {
-                label.textContent = "Modo claro";
-            }
-        } else {
-            root.setAttribute("data-theme", "light");
-            toggle.setAttribute("aria-pressed", "false");
-            if (label) {
-                label.textContent = "Modo oscuro";
-            }
+        const nextTheme = theme === "dark" ? "dark" : "light";
+        root.setAttribute("data-theme", nextTheme);
+        root.setAttribute("data-bs-theme", nextTheme);
+        toggle.setAttribute("aria-pressed", nextTheme === "dark" ? "true" : "false");
+        if (label) {
+            label.textContent = nextTheme === "dark" ? "Modo claro" : "Modo oscuro";
         }
     };
 
@@ -48,7 +42,7 @@
 
     toggle.addEventListener("click", () => {
         const currentTheme =
-            root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+            root.getAttribute("data-bs-theme") === "dark" ? "dark" : "light";
         const nextTheme = currentTheme === "dark" ? "light" : "dark";
         applyTheme(nextTheme);
 

@@ -1,106 +1,215 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title>CSS – Hojas de estilo en cascada</title>
+    <title>CSS - Hojas de estilo en cascada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Información básica sobre CSS, el lenguaje de estilos para la web.">
+    <meta name="description" content="Informacion basica sobre CSS, el lenguaje de estilos para la web.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-    <div class="container">
-        <h1>CSS</h1>
-        <p class="subtitulo">Cascading Style Sheets</p>
-    </div>
-</header>
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark nav-shell sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <span class="brand-mark">&lt;/&gt;</span>
+                <span>Web Stack</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fa-solid fa-house me-1" aria-hidden="true"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html.html"><i class="fa-brands fa-html5 me-1" aria-hidden="true"></i>HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="css.html" aria-current="page"><i class="fa-brands fa-css3-alt me-1" aria-hidden="true"></i>CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript.html"><i class="fa-brands fa-js me-1" aria-hidden="true"></i>JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fa-solid fa-envelope me-1" aria-hidden="true"></i>Contacto</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center ms-lg-3 mt-3 mt-lg-0">
+                    <button class="btn btn-outline-light btn-sm d-inline-flex align-items-center gap-2 theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
+                        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                        <span class="theme-label">Modo oscuro</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<nav>
-    <div class="container">
-        <ul class="menu">
-            <li><a href="index.html"><i class="fa-solid fa-house icon" aria-hidden="true"></i>Inicio</a></li>
-            <li><a href="html.html"><i class="fa-brands fa-html5 icon" aria-hidden="true"></i>HTML</a></li>
-            <li><a href="css.html" class="activo"><i class="fa-brands fa-css3-alt icon" aria-hidden="true"></i>CSS</a></li>
-            <li><a href="javascript.html"><i class="fa-brands fa-js icon" aria-hidden="true"></i>JavaScript</a></li>
-            <li><a href="contacto.html"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i>Contacto</a></li>
-            <li>
-                <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Cambiar tema">
-                    <i class="fa-solid fa-moon icon icon-moon" aria-hidden="true"></i>
-                    <i class="fa-solid fa-sun icon icon-sun" aria-hidden="true"></i>
-                    <span class="theme-label">Modo oscuro</span>
-                </button>
-            </li>
-        </ul>
-    </div>
-</nav>
+    <header class="hero hero--sub">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-lg-8">
+                    <span class="badge text-bg-light text-dark mb-2">CSS3</span>
+                    <h1 class="display-5 fw-bold">CSS</h1>
+                    <p class="lead text-white text-opacity-75">Lenguaje de estilos que transforma estructuras en experiencias visuales.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="btn btn-outline-light" href="javascript.html">Siguiente: JavaScript</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<main class="container">
-    <section>
-        <article>
-            <h2>¿Qué es CSS?</h2>
-            <p>
-                CSS es el lenguaje que se utiliza para definir la apariencia visual de un sitio web. 
-                Permite controlar colores, tamaños, márgenes, tipografía y la disposición de los elementos en la pantalla.
-            </p>
-            <p>
-                Gracias a CSS, un mismo documento HTML puede mostrarse de formas muy diferentes, adaptándose a móviles,
-                tabletas y computadores de escritorio.
-            </p>
-        </article>
-    </section>
+    <main class="flex-grow-1">
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-7 reveal">
+                        <h2 class="section-title">&iquest;Qu&eacute; es CSS?</h2>
+                        <p>CSS define colores, tipografias, espaciados y layouts para que una pagina HTML se vea coherente en distintos dispositivos.</p>
+                        <p>Con CSS puedes crear grillas flexibles, animaciones y adaptaciones responsivas sin modificar el contenido base.</p>
+                        <div class="alert alert-warning" role="alert">Separar estructura y presentacion facilita el mantenimiento y la escalabilidad.</div>
+                    </div>
+                    <div class="col-lg-5 reveal delay-1">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5">Ventajas</h3>
+                                <ul class="list-group list-group-flush mt-3">
+                                    <li class="list-group-item">Reutilizacion de estilos en varias paginas.</li>
+                                    <li class="list-group-item">Diseno adaptable a movil y escritorio.</li>
+                                    <li class="list-group-item">Consistencia visual en todo el sitio.</li>
+                                    <li class="list-group-item">Mejor experiencia de usuario.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section class="imagen-principal">
-        <article>
-            <h2>Ejemplo básico de reglas CSS</h2>
-            <figure>
-                <img src="img/css3.png" alt="Logo de CSS3">
-                <figcaption>CSS3 añade nuevas propiedades para animaciones, gradientes y diseño flexible.</figcaption>
-            </figure>
-            <pre><code>h1 {
-  font-family: Arial, sans-serif;
+        <section class="py-5 bg-body-tertiary">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5 reveal">
+                        <img src="img/css3.png" alt="Logo de CSS3" class="img-fluid rounded-4 shadow-soft">
+                    </div>
+                    <div class="col-lg-7 reveal delay-1">
+                        <h2 class="section-title">Ejemplo basico de reglas CSS</h2>
+                        <p class="section-lead">Una regla CSS combina selectores y declaraciones.</p>
+                        <pre class="code-block mb-0"><code>h1 {
+  font-family: "Fraunces", serif;
   text-align: center;
+  color: #1d6f8a;
 }
 
 p {
-  line-height: 1.5;
-}</code></pre>
-        </article>
-    </section>
+  line-height: 1.6;
+  color: #556572;
+}
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <article>
-            <h2>Ventajas de utilizar CSS</h2>
-            <ul>
-                <li>Separa el contenido (HTML) de la presentación.</li>
-                <li>Permite reutilizar estilos en múltiples páginas.</li>
-                <li>Reduce la cantidad de código repetido.</li>
-                <li>Facilita el diseño adaptable a diferentes dispositivos.</li>
-                <li>Mejora la experiencia de usuario y la accesibilidad.</li>
-            </ul>
-        </article>
-    </section>
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-6 reveal">
+                        <h2 class="section-title">Conceptos basicos</h2>
+                        <div class="accordion" id="cssAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingSelectors">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelectors" aria-expanded="true" aria-controls="collapseSelectors">
+                                        Selectores
+                                    </button>
+                                </h3>
+                                <div id="collapseSelectors" class="accordion-collapse collapse show" aria-labelledby="headingSelectors" data-bs-parent="#cssAccordion">
+                                    <div class="accordion-body">Indican a que elementos HTML se aplicara un estilo.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingBox">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBox" aria-expanded="false" aria-controls="collapseBox">
+                                        Box Model
+                                    </button>
+                                </h3>
+                                <div id="collapseBox" class="accordion-collapse collapse" aria-labelledby="headingBox" data-bs-parent="#cssAccordion">
+                                    <div class="accordion-body">Cada elemento tiene contenido, padding, borde y margen.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="headingFlex">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlex" aria-expanded="false" aria-controls="collapseFlex">
+                                        Flexbox y Grid
+                                    </button>
+                                </h3>
+                                <div id="collapseFlex" class="accordion-collapse collapse" aria-labelledby="headingFlex" data-bs-parent="#cssAccordion">
+                                    <div class="accordion-body">Sistemas modernos para organizar columnas y filas responsivas.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 reveal delay-1">
+                        <h2 class="section-title">Buenas practicas</h2>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="feature-icon mb-3"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+                                        <h3 class="h6">Jerarquia clara</h3>
+                                        <p class="mb-0">Define tipografias y espaciados consistentes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="feature-icon mb-3"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i></div>
+                                        <h3 class="h6">Mobile first</h3>
+                                        <p class="mb-0">Dise&ntilde;a pensando primero en pantallas pequenas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="feature-icon mb-3"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div>
+                                        <h3 class="h6">Colores consistentes</h3>
+                                        <p class="mb-0">Usa variables CSS para mantener una paleta estable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <div class="feature-icon mb-3"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+                                        <h3 class="h6">Animaciones utiles</h3>
+                                        <p class="mb-0">Aplica transiciones suaves solo cuando aporten valor.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <article>
-            <h2>Conceptos básicos de CSS</h2>
-            <p>Una regla CSS está compuesta por un <strong>selector</strong> y un conjunto de <strong>declaraciones</strong>:</p>
-            <ol>
-                <li>El <strong>selector</strong> indica a qué elementos HTML se aplicará el estilo.</li>
-                <li>Cada <strong>declaración</strong> contiene una propiedad y un valor.</li>
-            </ol>
-        </article>
-    </section>
-</main>
+    <footer class="footer mt-auto py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <span>&copy; 2025 Sitio informativo sobre lenguajes del desarrollo web.</span>
+            <span class="small text-white-50">CSS y diseno responsivo.</span>
+        </div>
+    </footer>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2025 – Sitio informativo sobre lenguajes del desarrollo web.</p>
-    </div>
-</footer>
-<script src="js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
